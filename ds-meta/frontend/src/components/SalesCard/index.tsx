@@ -5,13 +5,16 @@ import './styles.css'
 
 
 function SalesCard() {
+
+    const date = new Date(new Date().setDate(new Date().getDate() - 365));
+
     return (
         <div className="dsmeta-card">
             <h2 className="dsmeta-sales-title">Vendas</h2>
             <div>
                 <div className="dsmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
+                        selected={date}
                         onChange={(date: Date) => { }}
                         className="dsmeta-form-control"
                         dateFormat="dd/MM/yyyy"
@@ -19,7 +22,7 @@ function SalesCard() {
                 </div>
                 <div className="dsmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
+                        selected={date}
                         onChange={(date: Date) => { }}
                         className="dsmeta-form-control"
                         dateFormat="dd/MM/yyyy"
